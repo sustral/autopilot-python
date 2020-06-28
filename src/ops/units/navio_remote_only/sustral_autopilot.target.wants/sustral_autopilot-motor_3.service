@@ -1,0 +1,13 @@
+[Unit]
+Description=Sustral Autopilot Hardware Motor-3
+PartOf=sustral_autopilot.target
+Requires=sustral_autopilot.target sustral_autopilot-message_bus.service
+After=sustral_autopilot.target sustral_autopilot-message_bus.service
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /usr/bin/sustral_autopilot/launcher-motor_3.py
+StandardOutput=journal
+StandardError=journal
+[Install]
+WantedBy=sustral_autopilot.target

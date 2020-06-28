@@ -1,0 +1,6 @@
+[Unit]
+Description=Sustral Autopilot
+Requires=multi-user.target
+After=multi-user.target
+[Install]
+WantedBy=multi-user.target

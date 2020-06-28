@@ -1,0 +1,13 @@
+[Unit]
+Description=Sustral Autopilot Message_Bus
+PartOf=sustral_autopilot.target
+Requires=sustral_autopilot.target
+After=sustral_autopilot.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /usr/bin/sustral_autopilot/launcher-message_bus.py
+StandardOutput=journal
+StandardError=journal
+[Install]
+WantedBy=sustral_autopilot.target
